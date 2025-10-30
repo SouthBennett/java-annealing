@@ -15,7 +15,14 @@ public class ProblemSolving {
       if (words.isEmpty()) {
         return true;
       }
-    return false;
+      boolean isValid = true;
+
+      for (String word : words){
+        if (word.substring(0,1).toLowerCase() != "a") {
+          return false;
+        }
+      }
+    return isValid;
   }
 
   /**
