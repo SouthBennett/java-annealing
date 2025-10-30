@@ -18,7 +18,7 @@ public class ProblemSolving {
       boolean isValid = true;
 
       for (String word : words){
-        if (word.substring(0,1).toLowerCase() != "a") {
+        if (word.toLowerCase().charAt(0) != 'a') {
           return false;
         }
       }
@@ -34,6 +34,7 @@ public class ProblemSolving {
    * @return true if there is at least one empty string, false otherwise
    */
   public static boolean hasEmptyString(Set<String> words) {
+    
     return false;
   }
 
