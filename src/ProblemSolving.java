@@ -34,6 +34,7 @@ public class ProblemSolving {
    * @return true if there is at least one empty string, false otherwise
    */
   public static boolean hasEmptyString(Set<String> words) {
+<<<<<<< HEAD
     if (words.isEmpty()) {
         return false;
     }
@@ -57,7 +58,21 @@ public class ProblemSolving {
    * @return the maximum length of a word in the set
    */
   public static int maxLength(Set<String> words) {
-    return 0;
+      int longest = 0;
+
+      if (words.isEmpty()) {
+        return 0;
+      }
+
+
+      for (String word : words){
+        if (word.length() > longest) {
+          longest = word.length();
+        }
+      }
+
+
+    return longest;
   }
 
  /**
