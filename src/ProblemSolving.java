@@ -19,7 +19,7 @@ public class ProblemSolving {
 
       // Loop through each word in the set
       for (String word : words){
-        // If word equal null ord word is empty 
+        // If word equal null or word is empty 
         if (word == null || word.isEmpty()) {
           return false;
         }
@@ -40,18 +40,18 @@ public class ProblemSolving {
    * @return true if there is at least one empty string, false otherwise
    */
   public static boolean hasEmptyString(Set<String> words) {
+    // Edge case: If set if empty, return false
     if (words.isEmpty()) {
         return false;
     }
-
-    boolean isValid = true;
-
+      // Loop through each word in the set
       for (String word : words){
-        if (word == " ") {
-          return false;
+        // if word is equal to null or word is an empty string 
+        if (word == null || word.isEmpty()) {
+          return true;
         }
       }
-    return isValid;
+    return false;
   }
 
   /**
